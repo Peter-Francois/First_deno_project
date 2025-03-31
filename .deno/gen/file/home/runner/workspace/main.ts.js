@@ -1,0 +1,7 @@
+import { serve } from "https://deno.land/std/http/server.ts";
+const PORT = 8000;
+console.log(`Serveur en cours d'exécution sur http://localhost:${PORT}`);
+serve((req)=>new Response("Hello, API!"), {
+  port: PORT
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZpbGU6Ly8vaG9tZS9ydW5uZXIvd29ya3NwYWNlL21haW4udHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgc2VydmUgfSBmcm9tIFwiaHR0cHM6Ly9kZW5vLmxhbmQvc3RkL2h0dHAvc2VydmVyLnRzXCI7XG5cbmNvbnN0IFBPUlQgPSA4MDAwO1xuY29uc29sZS5sb2coYFNlcnZldXIgZW4gY291cnMgZCdleMOpY3V0aW9uIHN1ciBodHRwOi8vbG9jYWxob3N0OiR7UE9SVH1gKTtcblxuc2VydmUoKHJlcSkgPT4gbmV3IFJlc3BvbnNlKFwiSGVsbG8sIEFQSSFcIiksIHsgcG9ydDogUE9SVCB9KTtcbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxTQUFTLEtBQUssUUFBUSx1Q0FBdUM7QUFFN0QsTUFBTSxPQUFPO0FBQ2IsUUFBUSxHQUFHLENBQUMsQ0FBQyxrREFBa0QsRUFBRSxLQUFLLENBQUM7QUFFdkUsTUFBTSxDQUFDLE1BQVEsSUFBSSxTQUFTLGdCQUFnQjtFQUFFLE1BQU07QUFBSyJ9
