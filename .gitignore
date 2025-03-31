@@ -1,14 +1,11 @@
 
 # Deno specific
 .deno/
-*.lock
-lock.json
 
 # Environment variables
 .env
 
 # Replit specific
-.replit
 .config/
 generated-icon.png
 replit.nix
