@@ -1,4 +1,4 @@
-import { Application, Router } from "https://deno.land/x/oak/mod.ts";
+import { Application, Router } from "oak";
 
 // Création du routeur
 const router = new Router();
@@ -7,7 +7,7 @@ router.get("/", (context) => {
   context.response.body = { count: counter };
 });
 
-router.post("increment", (ctx) => {
+router.post("/increment", (ctx) => {
   counter++;
   ctx.response.body = { count: counter };
 });
@@ -18,5 +18,5 @@ app.use(router.routes());
 app.use(router.allowedMethods());
 
 // Démarrage du serveur sur le port 8000
-console.log("Serveur démarré sur http://localhost:8000");
-await app.listen({ port: 8000 });
+console.log("Serveur démarré sur http://0.0.0.0:8000");
+await app.listen({ port: 8000, hostname: "0.0.0.0" });
