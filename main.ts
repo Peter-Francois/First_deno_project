@@ -1,4 +1,4 @@
-import { Application, Router } from "oak";
+import { Application, Router } from "";
 
 // Création du routeur
 const router = new Router();
