@@ -37,3 +37,15 @@ externalPort = 80
 [[ports]]
 localPort = 8000
 externalPort = 8000
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+author = 40950908
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "deno run --allow-net main.ts"
