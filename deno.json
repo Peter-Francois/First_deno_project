@@ -1,5 +1,8 @@
 {
   "version": "3",
+  "imports": {
+    "oak": "https://deno.land/x/oak@v17.1.4/mod.ts"
+  },
   "packages": {
     "specifiers": {
       "jsr:@oak/commons@^1.0": "jsr:@oak/commons@1.0.0",
