@@ -2,26 +2,14 @@ import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 
 // Création du routeur
 const router = new Router();
+let counter = 0;
 router.get("/", (context) => {
-  context.response.body = `
-    <html>
-      <head>
-        <title>Compteur en Deno</title>
-      </head>
-      <body>
-        <h1>Compteur : <span id="count">0</span></h1>
-        <button onclick="increment()">+1</button>
+  context.response.body = { count: counter };
+});
 
-        <script>
-          function increment() {
-            let countElement = document.getElementById("count");
-            let count = parseInt(countElement.innerText);
-            countElement.innerText = count + 1;
-          }
-        </script>
-      </body>
-    </html>
-  `;
+router.post("increment", (ctx) => {
+  counter++;
+  ctx.response.body = { count: counter };
 });
 
 // Création de l'application
